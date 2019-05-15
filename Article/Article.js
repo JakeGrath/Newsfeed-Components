@@ -25,6 +25,9 @@ class Article {
 - With your selection in place, now chain .forEach() on to the articles variable to iterate over the articles NodeList and create a new instance of Article by passing in each article as a parameter to the Article class.
 
 */
-
-const articles = document.querySelectorAll('.article')
+function getArticles(){
+let articles = document.querySelectorAll('.article:not(.article-form)');
 articles.forEach(object =>{new Article(object)});
+}
+
+getArticles()
